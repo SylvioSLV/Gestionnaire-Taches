@@ -5,17 +5,14 @@
 }
 
 body{
-    background-color: beige;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0 auto;
 }
 
 .container{
-    margin-top: 5%;
-    width: 50vh;
-    padding: 20px 20px 50px 20px;
+    text-align: center;
+    width: 100vh;
+    margin: 5% auto;
+    padding: 20px 30px 50px 30px;
     border-radius: 5px;
     background-color: aqua;
 }
@@ -27,6 +24,7 @@ form{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2rem;
 }
 
 form button{
@@ -34,15 +32,15 @@ form button{
     color: white;
     cursor: pointer;
     font-weight: 800;
-    padding: 20px;
+    padding: .5rem 2rem;
     border: none;
-    transition: .7s;
+    transition: all .7s ease;
 }
 
 form button:hover{
-    border-radius: 15px;
+    border-radius: 10px;
     margin-left: 10px;
-    transition: .7s;
+    transition: all .7s ease;
     background-color: white;
     color: #1dd600;
 }
@@ -50,10 +48,108 @@ form button:hover{
 form input{
     border: none;
     outline: none;
-    padding: 19px;
-    width: 30em;
+    padding: 7px;
+    width: 20em;
 }
 
 form input{
     box-shadow: 20px;
+}
+
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list{
+    list-style-type: none;
+}
+
+.todo{
+    background: white;
+    margin: 0.5rem;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .8s ease;
+}
+
+.todo li{
+    text-align: left;
+    margin: 0 .2rem;
+    outline: none;
+    font-size: 1rem;
+    padding: .8rem 5rem .5rem .5rem;
+    flex: 1;
+}
+
+.trash-btn{
+    color: red;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: .7rem;
+}
+
+.trash-btn:hover{
+    background-color: red;
+    color: white;
+    border-radius: 3rem 0 0 1rem;
+    transition: all .7s ease;
+}
+
+.complete-btn{
+    color: #01d758;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: .7rem;
+}
+
+.complete-btn:hover{
+    background: #01d758;
+    color: white;
+    border-radius: 0 1rem 3rem 0;
+    transition: all .7s ease;
+}
+
+.fa-trash,
+.fa-check{
+    pointer-events: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: .6;
+}
+
+.fall{
+    transform: translateX(20rem);
+    opacity: 0;
+}
+@media screen and (max-width:500px) {
+    form{
+        flex-direction: column;
+    }
+
+    form input{
+        padding: 10px;
+        width: 20em;
+    }
+
+    form button{
+        font-weight: 600;
+        padding: 10px;
+    }
+
+    form button:hover{
+        border-radius: 0px;
+    }
+
+    header h1{
+        font-size: 1.5rem;
+    }
 }
