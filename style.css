@@ -13,8 +13,9 @@ body{
 }
 
 .container{
+    margin-top: 5%;
     width: 50vh;
-    padding: 90px 20px;
+    padding: 20px 20px 50px 20px;
     border-radius: 5px;
     background-color: aqua;
 }
@@ -29,15 +30,18 @@ form{
 }
 
 form button{
-    background-color: #000000;
+    background-color: #01d758;
     color: white;
     cursor: pointer;
     font-weight: 800;
     padding: 20px;
     border: none;
+    transition: .7s;
 }
 
 form button:hover{
+    border-radius: 15px;
+    margin-left: 10px;
     transition: .7s;
     background-color: white;
     color: #1dd600;
@@ -46,7 +50,7 @@ form button:hover{
 form input{
     border: none;
     outline: none;
-    padding: 20px;
+    padding: 19px;
     width: 30em;
 }
 
