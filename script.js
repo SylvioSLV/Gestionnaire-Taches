@@ -2,6 +2,7 @@
 const todoInput = document.querySelector(".todo-input");
 const todoButton = document.querySelector(".todo-button");
 const todoList = document.querySelector(".todo-list");
+const tache = document.querySelector(".tache");
 
 // Event listeners
 todoButton.addEventListener("click", addTodo);
@@ -10,9 +11,15 @@ todoList.addEventListener('click', deleteCheck)
 
 // Functions
 function addTodo(event){
+
     // Prevent form from submitting
     event.preventDefault();
 
+    if (todoInput.value==="") {
+        alert("Vous devez saisir une tâche")
+    } else {
+    
+    tache.innerHTML = "Voici vos tâches"
     // Todo DIV
     const todoDiv = document.createElement("div");
     todoDiv.classList.add("todo");
@@ -41,6 +48,7 @@ function addTodo(event){
 
     // Clear Todo INPUT VALUE
     todoInput.value = "";
+    }
 }
 
 function deleteCheck(e) {
