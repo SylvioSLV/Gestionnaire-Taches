@@ -38,7 +38,7 @@ function addTodo(event){
     todoDiv.appendChild(newTodo);
 
 
-    // CHECK MARK BUTTON =======> BOUTON COCHER
+    // TRASH BUTTON =======> BOUTON DECHETS
     const trashButton = document.createElement("button");
     trashButton.innerHTML = '<i class="fas fa-trash"></i>';
     trashButton.classList.add("trash-btn");
@@ -60,10 +60,12 @@ function deleteCheck(e) {
         const todo = item.parentElement;
 
         // Animation
-        todo.classList.add('fall');
-        todo.addEventListener("transitionend", function() {
+        if (confirm("Etès-vous sûr de vouloir supprimer cette tâche?")) {
+            todo.classList.add('fall');
+            todo.addEventListener("transitionend", function() {
             todo.remove();
         })
+        }
     }
 
     // CHECK MARK =======> Cocher
